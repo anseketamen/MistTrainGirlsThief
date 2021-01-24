@@ -5,6 +5,16 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>MistTrainGirlsThief.Program</StartupObject>
+    <Authors>Anseketamen</Authors>
+    <Company>anseketamen.net</Company>
+    <Description>ミストレのリソース保存ツール</Description>
+    <Copyright></Copyright>
+    <PackageLicenseExpression></PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
 
   <ItemGroup>

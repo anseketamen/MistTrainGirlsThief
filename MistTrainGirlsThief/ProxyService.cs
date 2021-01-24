@@ -33,6 +33,9 @@ namespace MistTrainGirlsThief
             //    h => proxyServer.BeforeResponse -= async (s, e) => await Task.Run(() => h(e))
             //    );
 
+            proxyServer.CertificateManager.RootCertificateIssuerName = "Mist Train Girls Thief";
+            proxyServer.CertificateManager.RootCertificateName = "Mist Train Girls Thief";
+
             //外部に公開するならこっち
             //var explicitEndPoint = new ExplicitProxyEndPoint(IPAddress.Loopback, Port, true);
             //今回はミストレと同じPCで動かすのでこっち
