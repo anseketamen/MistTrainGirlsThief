@@ -12,7 +12,7 @@
 
 ### 動作確認環境
 
-Windows 10 / .NET 5.0
+Windows 10 / .NET 6
 
 
 ### ライセンス
