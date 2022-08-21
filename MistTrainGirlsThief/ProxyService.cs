@@ -64,6 +64,10 @@ namespace MistTrainGirlsThief
                         mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody());
                         //mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody().Timeout(TimeSpan.FromSeconds(1)));
                     }
+                    else if (e.HttpClient.Request.RequestUri.AbsoluteUri.StartsWith("https://app-misttrain-prod-001.azurewebsites.net/api/"))
+                    {
+                        mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody());
+                    }
                 }
                 catch (Exception) { }
             };
