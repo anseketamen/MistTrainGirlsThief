@@ -54,20 +54,21 @@ namespace MistTrainGirlsThief
             {
                 try
                 {
-                    if (e.HttpClient.Request.RequestUri.Host == "assets.mist-train-girls.com")
+                    if (e.HttpClient.Request.RequestUri.Host == "assets4.mist-train-girls.com")
                     {
                         mtgThief.AssetReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody());
                         //mtgThief.AssetReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody().Timeout(TimeSpan.FromSeconds(1)));
                     }
-                    else if (e.HttpClient.Request.RequestUri.AbsoluteUri.StartsWith("https://mist-train-girls.azurefd.net/api/"))
-                    {
-                        mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody());
-                        //mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody().Timeout(TimeSpan.FromSeconds(1)));
-                    }
-                    else if (e.HttpClient.Request.RequestUri.AbsoluteUri.StartsWith("https://app-misttrain-prod-001.azurewebsites.net/api/"))
-                    {
-                        mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody());
-                    }
+                    // APIはよくわからんバイナリになった
+                    // else if (e.HttpClient.Request.RequestUri.AbsoluteUri.StartsWith("https://mist-train-girls.azurefd.net/api/"))
+                    // {
+                    //     mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody());
+                    //     //mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody().Timeout(TimeSpan.FromSeconds(1)));
+                    // }
+                    // else if (e.HttpClient.Request.RequestUri.AbsoluteUri.StartsWith("https://mist-production-api-001.mist-train-girls.com/api/"))
+                    // {
+                    //     mtgThief.ApiReceived(e.HttpClient.Request.RequestUri.PathAndQuery, await e.GetResponseBody());
+                    // }
                 }
                 catch (Exception) { }
             };
